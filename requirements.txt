@@ -1,0 +1,45 @@
+# ============================================================
+# DrowsyGuard — requirements.txt
+# Pin minor versions; allow patch updates (~=)
+# ============================================================
+
+# Core ML
+tensorflow~=2.15
+scikit-learn~=1.4
+imbalanced-learn~=0.12
+numpy~=1.26
+scipy~=1.13
+
+# Computer Vision
+opencv-python-headless~=4.9
+mediapipe~=0.10
+albumentations~=1.4
+
+# Explainability
+grad-cam~=1.5
+
+# Visualisation
+matplotlib~=3.8
+seaborn~=0.13
+plotly~=5.20
+
+# UI
+gradio~=4.36
+
+# API Server
+fastapi~=0.111
+uvicorn[standard]~=0.30
+python-multipart~=0.0.9
+pydantic~=2.7
+pillow~=10.3
+
+# Utilities
+tqdm~=4.66
+pyyaml~=6.0
+requests~=2.31
+
+# Dev / Testing (install with: pip install -r requirements-dev.txt)
+# pytest~=8.2
+# nbstripout~=0.7
+# black~=24.4
+# ruff~=0.4

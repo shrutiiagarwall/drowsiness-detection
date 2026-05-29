@@ -1,0 +1,53 @@
+# ============================================================
+# DrowsyGuard — Master Configuration
+# All hyper-parameters live here; no magic numbers in code.
+# ============================================================
+
+data:
+  dataset_dir: "data/raw"
+  train_subdir: "train"
+  test_subdir: "test"
+  categories: ["Closed", "Open"]
+  yawn_categories: ["no_yawn", "yawn"]
+  img_size: 48
+  yawn_img_size: 64
+  val_split: 0.2
+  random_seed: 42
+
+preprocessing:
+  apply_clahe: true
+  clahe_clip_limit: 2.0
+  clahe_tile_grid: [4, 4]
+  augment_factor: 3       # minority class augmentation multiplier
+  apply_smote: true
+  smote_k_neighbors: 5
+
+training:
+  batch_size: 64
+  epochs: 30
+  learning_rate: 1e-3
+  l2_regularization: 1e-4
+  dropout_rates: [0.2, 0.3, 0.3, 0.4]
+  early_stopping_patience: 7
+  reduce_lr_patience: 4
+  reduce_lr_factor: 0.5
+
+model:
+  num_classes: 2
+  cbam_ratio: 8           # channel attention reduction ratio
+  cbam_kernel: 7          # spatial attention kernel size
+  conv_filters: [32, 64, 128]
+
+inference:
+  perclos_window_frames: 90
+  perclos_threshold: 0.70  # eyes closed >70% of window → drowsy
+  fusion_eye_weight: 0.6
+  fusion_yawn_weight: 0.4
+  alert_threshold: 0.65    # fusion score → ALERT
+  warning_threshold: 0.45  # fusion score → WARNING
+
+paths:
+  weights_dir: "models/weights"   # git-ignored
+  tflite_dir: "models/tflite"     # git-ignored
+  logs_dir: "logs"
+  samples_dir: "data/samples"

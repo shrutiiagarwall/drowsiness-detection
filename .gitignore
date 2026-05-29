@@ -1,0 +1,101 @@
+# ============================================================
+# DrowsyGuard .gitignore
+# CRITICAL: Prevents accidental upload of model weights,
+# datasets, secrets, and generated artefacts.
+# ============================================================
+
+# ── Model Weights & Artefacts (NEVER UPLOAD) ────────────────
+*.h5
+*.weights.h5
+*.keras
+*.pkl
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+*.ckpt
+*.ckpt.*
+*.safetensors
+saved_model/
+models/weights/
+checkpoints/
+
+# ── Data (too large / possibly proprietary) ─────────────────
+data/raw/
+data/processed/
+*.zip
+*.tar
+*.tar.gz
+*.npy
+*.npz
+*.csv
+*.parquet
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# ── Virtual Environments ─────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# ── Secrets & Tokens ─────────────────────────────────────────
+.env
+.env.*
+secrets.yaml
+secrets.json
+*token*
+*api_key*
+ngrok_token.txt
+
+# ── Jupyter Notebook Outputs (keep .ipynb but strip outputs) ─
+# Tip: use `nbstripout` pre-commit hook to auto-strip outputs
+# .ipynb_checkpoints  ← KEEP this line (ignores checkpoint files)
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ── IDE & OS ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Logs & Caches ────────────────────────────────────────────
+*.log
+logs/
+runs/
+tensorboard_logs/
+mlruns/
+wandb/
+.cache/
+*.tmp
+
+# ── Generated Files ──────────────────────────────────────────
+dashboard.png
+fusion_dashboard.png
+gradcam_output/
+session_log*.json
+advanced_session*.json
+tflite_model/
+
+# ── Coverage & Testing ───────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
