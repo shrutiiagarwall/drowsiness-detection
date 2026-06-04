@@ -174,7 +174,7 @@ uvicorn app.api:app --port 8000
 > Trained CBAM-CNN, balanced Yawn CNN, and soft-voting ensemble weights are
 > available **upon request for verified research collaboration**.
 >
-> Contact: `shruti.agarwal2023@uem.edu.in` with your institutional affiliation
+> Contact: `shrutiagarwaljsr@gmail.com` with your institutional affiliation
 > and intended research use.
 
 The Gradio UI runs in **graceful demo mode** automatically when weights are absent.
@@ -196,7 +196,7 @@ The Gradio UI runs in **graceful demo mode** automatically when weights are abse
 ## 📖 Citation
 If you use this work, please cite:
 \```bibtex
-@misc{drowsyguard2025,
+@misc{drowsyguard2026,
   title  = {DrowsyGuard: Real-Time Multi-Signal Driver Drowsiness Detection},
   author = {Shruti Agarwal},
   year   = {2026},
