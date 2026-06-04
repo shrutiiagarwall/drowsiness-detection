@@ -174,14 +174,14 @@ uvicorn app.api:app --port 8000
 > Trained CBAM-CNN, balanced Yawn CNN, and soft-voting ensemble weights are
 > available **upon request for verified research collaboration**.
 >
-> Contact: `[shruti.agarwal2023@uem.edu.in]` with your institutional affiliation
+> Contact: `shruti.agarwal2023@uem.edu.in` with your institutional affiliation
 > and intended research use.
 
 The Gradio UI runs in **graceful demo mode** automatically when weights are absent.
 
 ---
 
-## 📊 Results (Pending)
+## 📊 Results
 
 | Model | Accuracy | ROC-AUC |
 |---|---|---|
@@ -190,7 +190,6 @@ The Gradio UI runs in **graceful demo mode** automatically when weights are abse
 | MobileNetV2 | 0.9862 | 0.9862 |
 | **Ensemble** | **0.9954** | **0.9998** |
 
-*Withheld pending peer review.*
 
 ---
 
