@@ -139,7 +139,7 @@ drowsiness-detection/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/<your-username>/drowsiness-detection.git
+git clone https://github.com/shrutiiagarwall/drowsiness-detection.git
 cd drowsiness-detection
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -174,7 +174,7 @@ uvicorn app.api:app --port 8000
 > Trained CBAM-CNN, balanced Yawn CNN, and soft-voting ensemble weights are
 > available **upon request for verified research collaboration**.
 >
-> Contact: `[your-email@institution.edu]` with your institutional affiliation
+> Contact: `[shruti.agarwal2023@uem.edu.in]` with your institutional affiliation
 > and intended research use.
 
 The Gradio UI runs in **graceful demo mode** automatically when weights are absent.
@@ -183,16 +183,27 @@ The Gradio UI runs in **graceful demo mode** automatically when weights are abse
 
 ## 📊 Results (Pending)
 
-| Model | Accuracy | ROC-AUC | F1 (Drowsy) |
-|---|---|---|---|
-| Baseline CNN | — | — | — |
-| CBAM-CNN | — | — | — |
-| MobileNetV2 | — | — | — |
-| **Ensemble** | **—** | **—** | **—** |
+| Model | Accuracy | ROC-AUC |
+|---|---|---|
+| Baseline CNN | 0.5000 | 0.9131 |
+| CBAM-CNN | 0.9862 | 0.9989 |
+| MobileNetV2 | 0.9862 | 0.9862 |
+| **Ensemble** | **0.9954** | **0.9998** |
 
 *Withheld pending peer review.*
 
 ---
+
+## 📖 Citation
+If you use this work, please cite:
+\```bibtex
+@misc{drowsyguard2025,
+  title  = {DrowsyGuard: Real-Time Multi-Signal Driver Drowsiness Detection},
+  author = {Shruti Agarwal},
+  year   = {2026},
+  note   = {GitHub: https://github.com/shrutiiagarwall/drowsiness-detection}
+}
+\```
 
 ## 📜 License
 
